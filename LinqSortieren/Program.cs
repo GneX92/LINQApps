@@ -58,9 +58,9 @@ DirectoryInfo dir = new( @"C:\Windows" );
 
 var filesdesc = dir.GetFiles().OrderByDescending( x => x.Name );
 
-var filesbysize = dir.GetFiles().OrderBy( x => x.Length );
+var filesbysize = dir.GetFiles().OrderBy( x => x.Length ).Select( x => new { x.Name , x.Length } );
 
-var filesbytime = dir.GetFiles().OrderBy( x => x.LastAccessTime );
+var filesbytime = dir.GetFiles().OrderByDescending( x => x.LastAccessTime );
 
 #region Ausgabe ----------------------------------------------------------------------------------------------------------------------
 
@@ -70,7 +70,7 @@ foreach ( var i in filesdesc )
 
 Console.WriteLine( "\nFiles nach Größe Aufsteigend:" );
 foreach ( var i in filesbysize )
-    Console.WriteLine( $"{i.Length,7} Bytes" );
+    Console.WriteLine( $"{i,7} Bytes" );
 
 Console.WriteLine( "\nFiles nach letztem Zugriff aufsteigend:" );
 foreach ( var i in filesbytime )
