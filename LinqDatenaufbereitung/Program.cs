@@ -2,7 +2,7 @@
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-string [] productstring = File.ReadAllLines( @"C:\Users\ITA5-TN05\Desktop\Produkte.txt" );
+string [] productstring = File.ReadAllLines( @"C:\Users\julia\Desktop\Produkte.txt" );
 List<Product> products = new();
 
 foreach ( string line in productstring )
@@ -12,13 +12,20 @@ foreach ( string line in productstring )
     p.Name = fields [ 0 ];
     fields [ 1 ] = fields [ 1 ].Replace( '.' , ',' );
     p.Price = double.Parse( fields [ 1 ] );
-    p.Category = fields [ 2 ];
+    p.Category = fields [ 2 ].Trim();
     products.Add( p );
-    Console.WriteLine( p );
 }
 
-var avgpricepercatgeory = products.GroupBy( p => p.Category , p => p.Name );
+foreach ( Product product in products )
+    Console.WriteLine( product );
 
-foreach ( var product in products )
+var avgpricepercatgeory =
+    products.GroupBy( p => p.Category )
+            .Select( g => new { Category = g.Key , AvgPrice = g.Average( p => p.Price ) } );
 
-    Console.ReadLine();
+Console.WriteLine(  );
+
+foreach ( var group in avgpricepercatgeory )
+    Console.WriteLine( $"Category: {group.Category} Average Price: {group.AvgPrice:C}" );
+
+Console.ReadLine();
