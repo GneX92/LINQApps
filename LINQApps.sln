@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqGruppieren", "LinqGrupp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqMengenoperationen", "LinqMengenoperationen\LinqMengenoperationen.csproj", "{9EE3302F-88AE-4CFE-9A67-0712B9FCB0EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqDatenaufbereitung", "LinqDatenaufbereitung\LinqDatenaufbereitung.csproj", "{4CF91696-1A31-4110-B72F-BF2DA4E3CF0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqDatenaufbereitung", "LinqDatenaufbereitung\LinqDatenaufbereitung.csproj", "{4CF91696-1A31-4110-B72F-BF2DA4E3CF0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqJoin", "LinqJoin\LinqJoin.csproj", "{E01BCF7C-B95A-4590-B192-D2D7FF94431E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4CF91696-1A31-4110-B72F-BF2DA4E3CF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CF91696-1A31-4110-B72F-BF2DA4E3CF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CF91696-1A31-4110-B72F-BF2DA4E3CF0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E01BCF7C-B95A-4590-B192-D2D7FF94431E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E01BCF7C-B95A-4590-B192-D2D7FF94431E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E01BCF7C-B95A-4590-B192-D2D7FF94431E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E01BCF7C-B95A-4590-B192-D2D7FF94431E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
